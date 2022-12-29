@@ -1,0 +1,571 @@
+/* 头部导航 */
+
+.header {
+    width: 100%;
+    height: 67px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    border-bottom: 1px solid #aec7ec;
+    opacity: 1;
+    background-color: #f1f1f1;
+}
+
+.header-center a {
+    display: inline-block;
+    margin: 0px 20px;
+    line-height: 66px;
+    height: 67px;
+    color: #666;
+    font-size: 14px;
+}
+
+.header-right a:hover {
+    opacity: 0.5;
+}
+
+.header-center .active {
+    font-size: 16px;
+    color: #00BDFF;
+    border-bottom: 2px solid #00BDFF;
+}
+
+.header-right {
+    width: 230px;
+    text-align: right;
+}
+
+.header-right a {
+    color: #666;
+    font-size: 12px;
+}
+
+.header-right .logging {
+    display: inline-block;
+    border: 1px solid #d1d1d1;
+    width: 60px;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 15px;
+}
+
+.header-right .register {
+    display: inline-block;
+    border: 1px solid #ed510a;
+    width: 80px;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 15px;
+    background: #ed510a;
+    margin-left: 10px;
+    color: #fff;
+}
+
+/* 下面就是横幅的代码 */
+.banner {
+    height: 416px;
+    background-color: #f1f1f1;
+    position: relative;
+}
+
+/* 这个是为了点击内容以外的地方粒子效果会有反应,弄了一个遮罩层 */
+.banner .mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+#mydiv {
+    width: 100%;
+    /* background-color: #ed510a; */
+    position: absolute;
+    top: 67px;
+}
+
+.banner .container {
+    display: flex;
+    top: 67px;
+    height: 270px;
+    margin-top: 30px;
+    /* background-color: #00BDFF; */
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+    z-index: 2;
+}
+
+.banner .container-left {
+    width: 260px;
+    height: 270px;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.banner .container-left .icon {
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    color: #c6c6c6;
+    display: flex;
+    justify-content: space-around;
+}
+
+.banner .container-left .icon img {
+    margin-bottom: 10px;
+}
+
+/* 下面就是横幅右边的内容了 */
+.banner .container-right {
+    padding-left: 60px;
+    flex-grow: 1;
+}
+
+.banner .container-right h2 {
+    font-size: 22px;
+    color: #555;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.banner .container-right h2 span {
+    border: 1px solid #00bdff;
+    font-size: 12px;
+    color: #00BDFF;
+    font-weight: normal;
+    padding: 3px 4px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.banner .container-right .icon span {
+    color: #f8aa39;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 35px;
+    line-height: 50px;
+}
+
+.banner .container-right .icon img {
+    margin-right: 6px;
+    vertical-align: -6px;
+}
+
+.banner .container-right .censor {
+    font-size: 14px;
+    color: #666;
+}
+
+.banner .container-right .quantity {
+    padding: 20px 0;
+    margin-bottom: 5px;
+}
+
+.banner .container-right .quantity>span {
+    border: 1px solid #999;
+    color: #666;
+    font-size: 12px;
+    padding: 5px 14px;
+    cursor: pointer;
+}
+
+.container-right .quantity span {
+    border: 1px solid #999;
+    color: #666;
+    font-size: 12px;
+    padding: 5px 16px;
+    cursor: pointer;
+}
+
+.quantity .qrcode span {
+    margin-left: 15px;
+}
+
+.banner .container-right .quantity span.active {
+    background: url(../images/select.png) no-repeat;
+    background-position: right bottom;
+    color: #00BDFF;
+    border: 1px solid #00BDFF;
+}
+
+.quantity-img img {
+    vertical-align: -4px;
+}
+
+.banner .container-right .price {
+    font-size: 12px;
+}
+
+.banner .container-right .price span {
+    color: red;
+}
+
+.banner .container-right .frequency {
+    position: absolute;
+    background-color: #fff;
+    text-align: center;
+    font-size: 12px;
+    margin-left: -15px;
+    height: 0px;
+    overflow: hidden;
+    /* display: none; */
+    transition: all 0.5s;
+}
+
+/* 这个地方就是二维码移入之后有的样式 */
+.banner .container-right .quantity-img:hover+.frequency {
+    height: 140px;
+    /* display: block; */
+}
+
+.banner .container-right .frequency img {
+    width: 120px;
+}
+
+.banner .container-right .qrcode {
+    display: inline-block;
+}
+
+.banner .container-right>span {
+    line-height: 40px;
+    text-align: center;
+    display: block;
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #00bdff;
+    cursor: pointer;
+    margin-top: 18px;
+}
+
+
+/* 下面就是选项部分的代码 */
+.details-nav {
+    height: 46px;
+    border-bottom: 1px solid #f4f4f4;
+    line-height: 45px;
+}
+
+.details-nav span {
+    margin-right: 110px;
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+}
+
+.details-nav .on::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 3px;
+    top: 30px;
+    background-color: #00bdff;
+}
+
+/* 再写下面盒子的代码 */
+/* .details-content .container {
+    height: 1000px;
+} */
+
+.details-content .container .file-item {
+    /* background-color: #00BDFF; */
+    width: 1200px;
+    /* height: 500px; */
+    display: block;
+    /* background-color: #099ed9; */
+}
+
+.details-content .container .reference-item {
+    /* background-color: #7c1ece; */
+    width: 1200px;
+    /* height: 100px; */
+    display: none;
+}
+
+.details-content .container .example-item {
+    /* background-color: #867a3d; */
+    width: 1200px;
+    /* height: 100px; */
+    display: none;
+}
+
+.details-content .container .contact-item {
+    /* background-color: #28d72b; */
+    width: 1200px;
+    /* height: 100px; */
+    display: none;
+}
+
+/* 第一个盒子的样式 */
+.details-content .container .file-item {
+    width: 1200px;
+    /* height: 1000px; */
+    padding-top: 47px;
+}
+
+.details-content .container .item-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-content .container .left {
+    width: 920px;
+    font-size: 12px;
+    color: #777;
+
+    /* background-color: #3da7ae; */
+}
+
+.container .left span {
+    font-size: 12px;
+    color: #555;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+}
+
+.container .left .btn {
+    display: inline-block;
+    width: 150px;
+    height: 34px;
+    font-size: 14px;
+    line-height: 34px;
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #00bdff;
+}
+
+.description .title,.return-box .title {
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 18px;
+    margin-top: 50px;
+}
+
+.description .title::before {
+    content: '';
+    width: 4px;
+    height: 16px;
+    border-radius: 2px;
+    background-color: #00BDFF;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.return-box .title::before {
+    content: '';
+    width: 4px;
+    height: 16px;
+    border-radius: 2px;
+    background-color: #00BDFF;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.description table,
+.return-box table {
+    width: 100%;
+    border: 1px solid #c6c6c6;
+}
+
+.description table tr,.return-box table tr {
+    width: 100%;
+    border: 1px solid #c6c6c6;
+    line-height: 32px;
+    font-size: 12px;
+}
+
+.description table .bold,
+.return-box table .bold {
+    font-weight: bold;
+    color: #999;
+    background-color: #fbfbfb;
+}
+
+/* 第一个表格 */
+.description table tr td:nth-child(1) {
+    text-indent: 2em;
+    width: 184px;
+}
+
+.description table tr td:nth-child(2) {
+    width: 138px;
+}
+
+.description table tr td:nth-child(3) {
+    width: 138px;
+}
+
+.description table tr td:nth-child(4) {
+    text-indent: 2em;
+}
+
+
+/* 第二个表格 */
+.return-box .return tr td:nth-child(1) {
+    text-indent: 2em;
+}
+
+.return-box table tr td:nth-child(2) {
+    width: 135px;
+}
+
+.return-box table tr td:nth-child(3) {
+    width: 680px;
+}
+
+/* json工具格式化 */
+.json-top .title {
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 18px;
+    margin-top: 50px;
+    display: inline-block;
+}
+.json-top .title::before {
+    content: '';
+    width: 4px;
+    height: 16px;
+    border-radius: 2px;
+    background-color: #00BDFF;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.json .json-bottom span {
+    background: #1271ef;
+    font-weight: normal;
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 5px 12px;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.json .json-bottom>p {
+    font-size: 12px;
+    color: #555;
+    line-height: 35px;
+    text-indent: 2em;
+}
+
+.json .json-bottom .json-left {
+    text-indent: 0px;
+}
+
+.json .json-bottom {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* 下面是右边的内容了 */
+.details-content .container .right {
+    width: 220px;
+}
+.details-content .right h2 {
+    font-size: 16px;
+    line-height: 26px;
+    color: #999;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.details-content .right img {
+    margin-bottom: 14px;
+}
+
+.details-content .right .right-item {
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 15px;
+    margin-top: 15px;
+}
+
+.details-content .right .right-item .img-box {
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    padding-top: 18px;
+    text-align: center;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.details-content .right .right-item>p {
+    display: inline-block;
+    width: 150px;
+    padding-bottom: 5px;
+}
+
+.details-content .right .right-item .hidden {
+    width: 150px;
+    font-size: 12px;
+    color: #999;
+    line-height: 32px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+/* 右边部分的网上间距 */
+.details-content .container .reference-item .right{
+    padding-top: 47px;
+}
+.details-content .container .example-item .right{
+    padding-top: 47px;
+}
+.details-content .container .contact-item .right{
+    padding-top: 47px;
+}
+
+/* 第四个盒子的代码 */
+.contact-item .description table tr td:nth-child(1){
+    text-indent: 50px;
+}
+.contact-item .description table tr td:nth-child(2){
+    width: 150px;
+}
+
+
+/* 注册部分代码 */
+.free-register{
+    height: 150px;
+    background: url(../images/bottombg2.png) no-repeat center top;
+    text-align: center;
+    margin-top: 50px;
+}
+.free-register h2{
+    font-size: 28px;
+    color: #fff;
+    line-height: 48px;
+    padding-top: 22px;
+    margin-bottom: 12px;
+}
+.free-register p{
+    width: 150px;
+    height: 40px;
+    line-height: 38px;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    margin: auto;
+}

@@ -1,0 +1,170 @@
+body{
+    background-color: #F3F5F8;
+}
+.header{
+    background-color: #fff;
+}
+.header-container{
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.header-container img{
+    margin: 20px 0px;
+    height: 26px;
+    flex-flow: 1;
+}
+.header-container span{
+    height: 66px;
+    line-height: 66px;
+    font-size: 14px;
+    color: #8e8e8e;
+}
+.header-container span a{
+    height: 66px;
+    line-height: 66px;
+    font-size: 14px;
+    color: #00bdff;
+}
+
+
+/* 下面的登录框的代码 */
+.main{
+    width: 1000px;
+    height: 670px;
+    margin: auto;
+    background-color: #fff;
+    margin-top: 80px;
+}
+.main-content{
+    width: 420px;
+    padding-top: 40px;
+    margin: auto;
+    /* background-color: #00bdff; */
+}
+.main-content h2{
+    font-size: 38px;
+    color: #4b4b4b;
+    line-height: 58px;
+}
+.main-content h3{
+    font-size: 26px;
+    color: #4b4b4b;
+    line-height: 48px;
+}
+.main-content .red{
+    background-color: #ED510A;
+    padding: 0px 40px;
+    height: 32px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.main-content .red span{
+    margin-left: 6px;
+    line-height: 32px;
+}
+.main-content .red img{
+    vertical-align:-3px;
+}
+input{
+    width: 420px;
+    height: 40px;
+    outline: 0;
+    border: 1px solid #c5c5c5;
+    margin-bottom: 24px;
+    color: #a3a3a3;
+    font-size: 14px;
+    text-indent: 1em;
+}
+.font-input{
+    position: relative;
+}
+.font-input .font-btn{
+    position: absolute;
+    left: 295px;
+    top: 0px;
+    width: 125px;
+    height: 40px;
+    border: 1px solid #c5c5c5;
+    font-size: 12px;
+} 
+.font-input span{
+    width: 300px;
+    font-size: 12px;
+    color: #f15b5b;
+    position: absolute;
+    left: 425px;
+    top: 10px;
+    display: none;
+}
+.font-input a{
+    display: inline-block;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 12px;
+    background-color: #f15b5b;
+    margin-right: 5px;
+    line-height: 20px;
+    text-align: center;
+}
+.font{
+    font-size: 12px;
+}
+.font input{
+    width: 13px;
+    text-align: left;
+    height: 13px;
+    vertical-align: -3px;
+}
+.register-btn{
+    outline: 0;
+    width: 420px;
+    border: 0;
+    background:#E0E0E0;
+    color: #5F5F5F;
+    height: 50px;
+}
+.main .active{
+    outline: 0;
+    width: 420px;
+    border: 0;
+    background:#15BDED;
+    color: #fff;
+    height: 50px;
+}
+
+
+/* 那个验证那个小叉叉 */
+.input-x{
+    display: inline-block;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #EEEEEE;
+    position: absolute;
+    text-align: center;
+    color:#FFFFFF;
+    font-size: 12px;
+    top: 13px;
+    left: 400px;
+    display: none;
+    cursor: pointer;
+}
+.small{
+    display: inline-block;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #EEEEEE;
+    position: absolute;
+    text-align: center;
+    color:#FFFFFF;
+    font-size: 12px;
+    top: 13px;
+    left: 276px;
+    display: none;
+    cursor: pointer;
+}

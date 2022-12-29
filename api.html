@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./font-icon/iconfont.css">
+    <link rel="stylesheet" href="./css/api.css">
+</head>
+
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <a class="header-left" href="#"><img src="./images/new-logo-white2.png" alt="源码大数据"></a>
+        <span class="header-center">
+            <a href="./index.html">首页</a>
+            <a class="active" href="api.html">API</a>
+            <a href="case.html">案例</a>
+        </span>
+        <span class="header-right">
+            <a class="logging" href="./login.html">登录</a>
+            <a class="register" href="./register.html">注册有礼</a>
+        </span>
+    </header>
+
+    <!-- api分类部分 -->
+    <div class="api">
+        <div class="container">
+            <div class="api-nav">
+                <h2>API分类</h2>
+
+                <p class="apiList">
+                    <a href="#">全部</a>
+                    <a href="#">生活服务</a>
+
+                </p>
+            </div>
+            <div class="api-search">
+                <span class="api-font">全部</span>
+                <input id="api-input" type="text" placeholder="身份证实名">
+                <img src="./images/magnifier.png" alt="搜索">
+            </div>
+        </div>
+    </div>
+
+    <!-- api项目部分-->
+    <div class="api-item">
+        <div class="container">
+            <!-- 第一个 -->
+            <a class="item" href="./apidetails.html">
+                <div class="show">
+                    <span class="active">企业专业</span>
+                    <img src="./images/API_05.jpg" alt="">
+                    <p class="item-name">短信API服务</p>
+                    <p class="item-red">¥0.0400/次</p>
+                </div>
+                <div class="hide">
+                    申请数据
+                </div>
+            </a>
+            <p class="page">
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a class="last" href="#">......</a>
+                <a class="last" href="#">下一页</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- 接下来就又是页尾了 -->
+    <footer>
+        <div class="footer container"></div>
+    </footer>
+
+    <!-- 弹出登录模态框 -->
+    <!-- 这个地方因为要防止点白框框也会消失,所有我们用兄弟关系来做 -->
+    <div class="mask"></div>
+    <form action="./index.html" method="get">
+        <div class="login-box">
+            <img src="./images/loginlogo.png" alt="">
+            <p class="login-sign">
+                <span class="account blue">账号登录</span>
+                <span class="scan">扫码登陆</span>
+            </p>
+    
+            <!-- 这个是账号登录界面的 -->
+            <div class="item-all">
+                <div class="account-item">
+                    <p class="name-input">
+                        <span class="iconfont icon-wode"></span>
+                        <input  type="text" placeholder="用户名/手机号/邮箱">
+                        <i>x</i>
+                    </p>
+                    <p class="pwd-input">
+                        <span class="iconfont icon-kaisuohuansuo"></span>
+                        <input type="password" placeholder="密码">
+                        <span class="iconfont icon-yanjing_yincang_o
+                         pwd-btn"></span>
+                    </p>
+                    <p class="name-tips"><span>!</span>请输入3~6位用户名</p>
+                    <p class="pwd-tips"><span>!</span>请输入6~12位密码</p>
+                    <p class="pwd-font"><a href="#">忘记密码</a></p>
+                    <button class="login-btn" type="submit">登录</button>
+                    <p class="login-footer">
+                        还没有源码账号,<a href="./register.html">立即注册</a><span class="iconfont icon-arrow-"></span>
+                    </p>
+                </div>
+                <!-- 接下来这个就是扫码登陆界面的 -->
+                <div class="scan-item">
+                    <div class="scan-box">
+                        <img src="./images/showqrcode.jpg" alt="">
+                        <p class="title">微信扫码登录</p>
+                        <p>未关注微信公众号,请先关注后再登录</p>
+                    </div>
+                    <p class="login-footer login-left">
+                        还没有源码账号,<a href="./register.html">立即注册</a><span class="iconfont icon-arrow-"></span>
+                    </p>
+                </div>
+            </div>    
+        </div>
+    </form>
+
+    <!-- 下面是引入的js代码 -->
+    <script src="./js/dom.js"></script>
+    <script src="./js/api.js"></script>
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>

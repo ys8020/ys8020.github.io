@@ -1,0 +1,419 @@
+@charset "UTF-8";
+
+/* 头部导航 */
+
+.header {
+    width: 100%;
+    height: 67px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    border-bottom: 1px solid #aec7ec;
+    opacity: 1;
+    /* background-color: rgb(249, 245, 245,0); */
+}
+
+.header-center a {
+    display: inline-block;
+    margin: 0px 20px;
+    line-height: 66px;
+    height: 67px;
+    color: #666;
+    font-size: 14px;
+}
+.header-right a:hover{
+    opacity: 0.5;
+}
+
+.header-center .active {
+    font-size: 16px;
+    color: #00BDFF;
+    border-bottom: 2px solid #00BDFF;
+}
+
+.header-right {
+    width: 230px;
+    text-align: right;
+}
+
+.header-right a {
+    color: #666;
+    font-size: 12px;
+}
+
+.header-right .logging {
+    display: inline-block;
+    border: 1px solid #d1d1d1;
+    width: 60px;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 15px;
+}
+
+.header-right .register {
+    display: inline-block;
+    border: 1px solid #ed510a;
+    width: 80px;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 15px;
+    background: #ed510a;
+    margin-left: 10px;
+    color: #fff;
+}
+
+/* 下面是api分类导航部分 */
+.api-nav h2{
+    font-size: 28px;
+    color: #3d3e3e;
+    padding: 50px 0px 20px 0px;
+}
+.api a{
+    font-size: 14px;
+    color: #666;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    padding: 5px 14px 5px 14px;
+    display: inline-block;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.api .apiList a.on{
+    color: #00BDFF;
+    border: 1px solid #00BDFF;
+}
+.api a:hover{
+    color: #00BDFF;
+    border: 1px solid #00BDFF;
+}
+.api .bold{
+    font-weight: bold;
+}
+.api-search{
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+}
+.api-search #api-input{
+    width: 230px;
+    height: 30px;
+    outline: 0;
+    border: 0;
+    background-color: #f4f4f4;
+    border-radius: 30px;
+    margin-left: 20px;
+    font-size: 12px;
+    text-indent: 1em;
+}
+.api-search img{
+    position: absolute;
+    top: 8px;
+    margin-left: -25px;
+    cursor: pointer;
+}
+
+
+/* 下面就是api项目部分了 */
+.api-item{
+    margin-top: 30px;
+}
+.api-item .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.api-item .item{
+    width: 228px;
+    height: 270px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.item-name{
+    font-size: 12px;
+    color: #666;
+    line-height: 40px;
+}
+.item-green{
+    font-size: 12px;
+    color: #42C890;
+    margin-bottom: 5px;
+}
+.item-red{
+    font-size: 12px;
+    color: #FF7587;
+    margin-bottom: 5px;
+}
+.item{
+    overflow: hidden;
+    position: relative;
+}
+.item span{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #00bdff;
+    background-color: #e5f8ff;
+    padding: 6px 5px;
+    display: none;
+}
+.item span.active{
+    display: block;
+}
+.item .second{
+    margin-top: 40px;
+}
+.item:hover .hide{
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    margin-left: -96px;
+}
+.item .hide{
+    width: 192px;
+    height: 32px;
+    background-color: #00bdff;
+    left: 50%;
+    margin-left: -96px;
+    line-height: 32px;
+    color: #fff ;
+    text-align: center;
+    position: absolute;
+    transition: all 0.6s;
+    top: 300px;
+}
+.item .show{
+    padding-top: 58px;
+    transition: all 0.6s;
+}
+.item:hover .show{
+    padding-top: 48px;
+}
+
+/* 下面就是那个页码的代码了 */
+.page{
+    padding: 50px 0px;
+    text-align: center;
+    width: 100%;
+}
+.page a{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    border-radius: 50%;
+    line-height: 24px;
+    text-align: center;
+    color: #3d3e3e;
+    margin-left: 15px;
+}
+.page a:hover{
+    background-color: #00bdff;
+    color: #fff;
+}
+.page .last{
+    display: inline-block;
+    border-radius: 0%;
+    line-height: 24px;
+    text-align: center;
+    width: 50px;
+}
+.page .last:hover{
+    background-color: #FFFFFF;
+    color:  #00bdff;
+}
+
+/* 尾部最后的样式 */
+footer{
+    background-color: #F8F8F8;
+}
+
+/* 下面就是模态框的代码了 */
+.mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+}
+.login-box{
+    width: 400px;
+    height: 550px;
+    background-color: #fff;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -275px;
+    text-align: center;
+    padding: 20px;
+    display: none;
+}
+.login-box img{
+    margin-top: 30px;
+}
+.login-box .login-sign{
+    width: 60%;
+    padding:30px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: auto;
+
+}
+.login-box .login-sign span{
+    cursor: pointer;
+    flex-grow: 1;
+}
+.login-box .login-sign span:nth-child(1){
+    border-right: 2px solid #ccc;
+}
+.login-sign span.blue{
+    color: #00BDFF;
+}
+.login-sign .blue::after{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #00BDFF;
+    /* 要用定位来脱离文档流,不然那个横线也会长 */
+    position:absolute;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+.name-input input{
+    margin-bottom: 20px;
+}
+.name-input input,.pwd-input input{
+    width: 100%;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+    text-indent: 3em;
+}
+.name-input,.pwd-input{
+    position: relative;
+}
+.pwd-input .icon-yanjing_yincang_o{
+    position: absolute;
+    right: 0px;
+    top: 14px;
+    font-size: 25px;
+}
+.pwd-input .icon-yanjing_xianshi_o{
+    position: absolute;
+    right: 0px;
+    top: 14px;
+    font-size: 25px;
+}
+
+.icon-kaisuohuansuo,.icon-wode{
+    position:absolute;
+    display: inline-block;
+    font-size: 25px;
+    top: 8px;
+    left: 8px;
+}
+.iconfont{
+    color: #03C5FF;
+}
+.pwd-font{
+    text-align: right;
+    line-height: 50px;
+}
+.pwd-font a{
+    font-size: 14px;
+    color: #03C5FF;
+}
+.login-btn{
+    display: block;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    background: #03C5FF;
+    height: 46px;
+    color: #fff;
+}
+.login-footer{
+    padding: 0px 30px;
+    text-align: right;
+    line-height: 50px;
+    color: #909090;
+    font-size: 14px;
+}
+.login-footer a{
+    font-size: 14px;
+    color: #03C5FF;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.account-item{
+    display: block;
+}
+.scan-item{
+    display: none;
+}
+
+/* 扫码登录界面的代码 */
+.scan-box{
+    text-align: center;
+    width: 290px;
+    height: 240px;
+    border: 1px solid #ccc;
+    margin: auto;
+}
+.scan-box img{
+    width: 120px;
+}
+.login-left{
+    text-align: left;
+}
+.scan-box .title{
+    margin: 10px 0px;
+}
+.name-input i{
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #eee;
+    color: #fff;
+    position: absolute;
+    top: 16px;
+    right: 2px;
+    display: none;
+    cursor: pointer;
+}
+.name-tips,.pwd-tips{
+    font-size: 12px;
+    text-align: left;
+}
+.name-tips,.pwd-tips{
+    color:red;
+}
+.name-tips span,.pwd-tips span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: rgb(235, 124, 124);
+    color: rgb(237, 231, 231);
+    margin: 4px 5px;
+}
+.name-tips {
+    display: none;
+}
+.pwd-tips {
+    display: none;
+}

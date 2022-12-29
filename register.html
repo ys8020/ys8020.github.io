@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+
+<body>
+    <!-- 页头 -->
+    <header class="header">
+        <div class="header-container">
+            <img src="./images/logo-white.png" alt="">
+            <span>已有源码账号,<a href="./login.html"> 立即登录</a></span>
+        </div>
+    </header>
+    <!-- 这个是主要内容 -->
+    <main class="main">
+        <form action="./login.html" method="get" class="login-form">
+            <div class="main-content">
+                <h2>欢迎注册</h2>
+                <h3>百款接口免费使用</h3>
+                <p class="red">
+                    <img src="./images/reg-gift.png" alt="">
+                    <span>注册即送300元大礼包</span>
+                </p>
+                <p class="font-input">
+                    <input type="text" placeholder="用户名 (6~20位字母数字)">
+                    <i class="input-x">x</i>
+                    <span><a href="#">!</a>昵称需在6~20之间</span>
+                </p>
+                <p class="font-input">
+                    <input type="text" placeholder="请输入手机号">
+                    <i class="input-x">x</i>
+                    <span> <a href="#">!</a>请输入正确的手机号</span>
+
+                </p>
+                <p class="font-input">
+                    <input type="text" placeholder="请输入手机短信验证码">
+                    <i class="input-x small">x</i>
+                    <button class="font-btn" data-="">获取验证码</button>
+                    <span><a href="#">!</a>请输入4位手机验证码</span>
+
+                </p>
+                <p class="font-input">
+                    <input type="password" placeholder="请输入6至12位的密码">
+                    <i class="input-x">x</i>
+                    <span><a href="#">!</a>请输入6至12位的密码</span>
+                </p>
+                <p class="font">
+                    <label>
+                        <input type="checkbox">
+                        <span> 我已经阅读并接受</span>
+                        <a href="#">⟪源码用户服务协议⟫</a>
+                        <a href="#">⟪源码隐私政策⟫</a>
+                    </label>
+
+                </p>
+                <button type="submit" class="register-btn" data-name="uncheck">立即注册</button>
+            </div>
+        </form>
+
+    </main>
+
+
+    <!-- 下面就是js交互代码了 -->
+    <script src="./js/dom.js"></script>
+    <script src="./js/register.js"></script>
+</body>
+
+</html>

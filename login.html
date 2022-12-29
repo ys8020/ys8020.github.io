@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./font-icon/iconfont.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <!-- 左边内容 -->
+    <div class="left">
+        <!-- <img src="./images/login-bg.png" alt=""> -->
+    </div>
+    <!-- 右边内容 -->
+    <div class="right">
+        <form action="./index.html" method="get" class="login-form">
+            <div class="login-box">
+                <img src="./images/loginlogo.png" alt="">
+                <p class="login-sign">
+                    <span class="account blue">账号登录</span>
+                    <span class="scan">扫码登陆</span>
+                </p>
+        
+                <!-- 这个是账号登录界面的 -->
+                <div class="item-all">
+                    <div class="account-item">
+                        <p class="name-input">
+                            <span class="iconfont icon-wode"></span>
+                            <input type="text" placeholder="用户名/手机号/邮箱" name="username">
+                            <span class="clear">x</span>
+                        </p>
+                        <p class="pwd-input">
+                            <span class="iconfont icon-kaisuohuansuo"></span>
+                            <input type="password" placeholder="密码" name="pwd">
+                            <span class="iconfont icon-yanjing_yincang_o
+                             pwd-btn"></span>
+                        </p>
+                        <p class="tips-name"><span>!</span>请输入3~6位的用户名</p>
+                        <p class="tips-pwd"><span>!</span>请输入含数字和英文6~12位密码</p>
+                        <p class="pwd-font"><a href="#">忘记密码</a></p>
+                        <button type="submit" class="login-btn">登录</button>
+                        <p class="login-footer">
+                            还没有源码账号,<a href="./register.html">立即注册</a><span class="iconfont icon-arrow-"></span>
+                        </p>
+                    </div>
+                    <!-- 接下来这个就是扫码登陆界面的 -->
+                    <div class="scan-item">
+                        <div class="scan-box">
+                            <img src="./images/showqrcode.jpg" alt="">
+                            <p class="title">微信扫码登录</p>
+                            <p>未关注微信公众号,请先关注后再登录</p>
+                        </div>
+                        <p class="login-footer login-left">
+                            还没有源码账号,<a href="./register.html">立即注册</a><span class="iconfont icon-arrow-"></span>
+                        </p>
+                    </div>
+                </div>    
+            </div>
+        </form>
+    </div>
+
+
+      <!-- 下面是引入的js代码 -->
+      <script src="./js/dom.js"></script>
+      <script src="./js/login.js"></script>
+</body>
+
+</html>

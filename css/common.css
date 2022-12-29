@@ -1,0 +1,109 @@
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em,
+img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,
+dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption,
+tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output,
+ruby, section, summary,time, mark, audio, video {
+margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+display: block;}body {line-height: 1;
+}
+ol, ul {list-style: none;
+}blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}
+
+/* 上面是重置清除样式,下面才是所谓的公共样式 */
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+        font-size: 12px;
+        color: #1271ef; 
+}
+a:hover{
+    color:#00bdff;
+}
+.container{
+    width: 1200px;
+    margin: 0px auto;
+}
+
+
+
+/* 下面就是页尾部分的东西了 */
+.footer {
+    padding: 18px 0px;
+}
+
+.footer  ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer ul li {
+    width: 160px;
+    height: 236px;
+}
+
+.footer  ul li p {
+    height: 68px;
+    font-size: 14px;
+    line-height: 68px;
+    text-align: left;
+}
+
+.footer  ul li a {
+    display: block;
+    font-size: 12px;
+    line-height: 28px;
+    color: #b3b3b3;
+}
+
+.footer  ul .container-right span {
+    display: block;
+}
+
+.footer  ul .container-right {
+    /* background-color: #aec7ec; */
+    flex-grow: 1;
+    text-align: right;
+}
+
+.footer  ul .container-right span {
+    font-size: 16px;
+    line-height: 28px;
+    padding-top: 21px;
+    color: #181818;
+}
+
+.footer  ul .container-right .small {
+    font-size: 12px;
+    line-height: 27px;
+    margin-bottom: 24px;
+    color: #c0c0c0;
+}
+
+.footer .container-bottom {
+    padding-top: 38px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .container-bottom img{
+    margin-right: 10px;
+}
+.footer .container-bottom a {
+    font-size: 14px;
+    line-height: 20px;
+    color: #d1d1d1;
+    /* vertical-align: top; */
+}
+.footer .container-bottom span {
+    font-size: 14px;
+    line-height: 20px;
+    color: #d1d1d1;
+}

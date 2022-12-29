@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+body{
+    background-color: #F8F8F8;
+}
+/* 头部导航 */
+.header {
+    width: 100%;
+    height: 67px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    border-bottom: 1px solid #aec7ec;
+    position: absolute;
+    z-index: 10;
+    /* background-color: aquamarine; */
+}
+
+.header-center a {
+    display: inline-block;
+    margin: 0px 20px;
+    line-height: 66px;
+    height: 67px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.header-center .active {
+    font-size: 16px;
+    border-bottom: 2px solid #fff;
+}
+
+.header-right {
+    width: 230px;
+    text-align: right;
+}
+
+.header-right a {
+    color: #fff;
+    font-size: 12px;
+}
+
+.header-right .logging {
+    display: inline-block;
+    border: 1px solid #fff;
+    width: 60px;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 15px;
+}
+
+.header-right .register {
+    display: inline-block;
+    border: 1px solid #ed510a;
+    width: 80px;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 15px;
+    background: #ed510a;
+    margin-left: 10px;
+}
+
+.header-right a:hover {
+    opacity: 0.5;
+}
+
+
+#mydiv{
+    position: absolute;
+    /* 这个就是把这个优先级提升上来了 */
+    /* 让他这个页面边到下面去 */
+    z-index: -2 !important;
+}
+
+
+/* 横幅区域的代码 */
+.banner{
+    text-align: center;
+    height: 360px;
+    background-color: rgba(0,0,0,.88);
+}
+.banner h2{
+    font-size: 36px;
+    color: #fff;
+    line-height: 54px;
+    padding-top: 142px;
+}
+.banner p:nth-child(2){
+    font-size: 14px;
+    color: #fff;
+    line-height: 34px;
+}
+.banner p:nth-child(3){
+    font-size: 16px;
+    color: #fff;
+    line-height: 26px;
+}
+
+
+/* 下面就是哪里内容部分的内容了 */
+.case-common{
+    width: 1128px;
+    margin: auto;
+}
+.case-common h2{
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.case-common h2::after{
+    content: '';
+    width: 14px;
+    height: 2px;
+    background-color: #1271ef;
+    margin-top: 5px;
+    display: block;
+}
+.case-common span{
+    font-size: 12px;
+    color: #999;
+    margin-left: 5px;
+}
+.case-common ul{
+    display: flex;
+}
+.case-common li{
+    border: 1px solid #eee;
+    width: 354px;
+    height: 340px;
+    margin-right: 20px;
+}
+.case-common ul img{
+    height: 145px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.case-common ul h3{
+    font-size: 16px;
+    line-height: 40px;
+    color: #181818;
+    margin-left: 10px;
+    margin-top: 20px;
+    
+}
+.case-common ul p{
+    font-size: 12px;
+    line-height: 16px;
+    color: #666;
+    margin-bottom: 16px;
+    overflow: hidden;
+    margin-left: 10px;
+    /* 这个地方需要超出隐藏变省略号,网上查询的办法 */
+    overflow: hidden;
+    /* 代表用省略号 */
+    text-overflow: ellipsis;
+    /* 盒子熟悉 */
+    display: -webkit-box;
+    /* 超出几行之后隐藏 */
+    -webkit-line-clamp:4;
+    /* 多行省略条件 */
+    -webkit-box-orient: vertical;
+}
+.case-common ul li span{
+    font-size: 12px;
+    line-height: 32px;
+    color: #1271ef;
+    margin-left: 10px;
+}
+
+
+/* 下面更多伙伴的代码 */
+.case-common .item{
+    display: flex;
+}
+.case-common .item p{
+    width: 354px;
+    height: 120px !important;
+    padding-top: 41px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    background-color:#fff;
+    text-align: center;
+}
+.case-common .item img{
+    height: 40px;
+    margin: auto;
+}
+.footer-bg{
+    background-color: #fff;
+}
+.footer{
+    width: 1128px;
+    margin: auto;
+}
+
+/* 再做一个电梯导航 */
+.stairs{
+    position: fixed;
+    right: 50px;
+    top: 50%;
+    width: 72px;
+    margin-top: -80px;
+}
+.stairs span{
+    font-size: 14px;
+    line-height: 40px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+.stairs span.active::before{
+    width: 10px;
+    height: 3px;
+    content: '';
+    background-color: #1271ef;
+    position:absolute;
+    display: inline-block;
+    top: 20px;
+    left: -15px;
+}

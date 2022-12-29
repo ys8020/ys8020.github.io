@@ -1,0 +1,380 @@
+@charset "UTF-8";
+
+
+/* 头部导航 */
+
+.header {
+    width: 100%;
+    height: 67px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    border-bottom: 1px solid #aec7ec;
+    position: absolute;
+    z-index: 10;
+}
+
+.header-center a {
+    display: inline-block;
+    margin: 0px 20px;
+    line-height: 66px;
+    height: 67px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.header-center .active {
+    font-size: 16px;
+    border-bottom: 2px solid #fff;
+}
+
+.header-right {
+    width: 230px;
+    text-align: right;
+}
+
+.header-right a {
+    color: #fff;
+    font-size: 12px;
+}
+
+.header-right .logging {
+    display: inline-block;
+    border: 1px solid #fff;
+    width: 60px;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 15px;
+}
+
+.header-right .register {
+    display: inline-block;
+    border: 1px solid #ed510a;
+    width: 80px;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 15px;
+    background: #ed510a;
+    margin-left: 10px;
+}
+
+.header-right a:hover {
+    opacity: 0.5;
+}
+
+
+/* 轮播图 */
+.swiper {
+    height: 680px;
+}
+
+.swiper1 {
+    background: url(../images/banner1.png) no-repeat center top;
+}
+
+.swiper2 {
+    background: url(../images/banner2.png) no-repeat center top;
+}
+
+.swiper3 {
+    background: url(../images/banner3.png) no-repeat center top;
+}
+
+/* 如果需要给导入的轮播图按钮设置样式,就通过检查找到它的名字进行更改 */
+/* 这个地方要注意因为它这个是在after后面,所有是需要在after哪里设置 */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: #fff;
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* service服务部分 */
+.service {
+    padding-bottom: 80px;
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    padding-top: 70px;
+}
+
+.title h3 {
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.title p {
+    font-size: 12px;
+    line-height: 40px;
+    color: #666;
+}
+
+.service ul {
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.service .ul-div {
+    width: 240px;
+    height: 280px;
+    display: inline-block;
+    box-shadow: 2px 4px 10px 0 rgb(18 113 239 / 0.6);
+}
+
+.service .ul-font {
+    padding-left: 20px;
+}
+
+.service .ul-font h2 {
+    font-size: 22px;
+    color: #181818;
+    line-height: 34px;
+}
+
+.service .ul-font p {
+    font-size: 12px;
+    color: #666;
+    line-height: 24px;
+}
+
+.service .ul-font a {
+    line-height: 30px;
+}
+
+
+/* 下面就是API分类部分了 */
+.apiSort {
+    padding-bottom: 60px;
+    width: 100%;
+    background: url(../images/more-api-bg.svg) center top no-repeat #f8f9fb;
+}
+
+.apiSort ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.apiSort li {
+    margin-bottom: 20px;
+}
+
+.apiSort li img {
+    margin-top: 40px;
+}
+
+.apiSort .modular ul a {
+    display: inline-block;
+    width: 224px;
+    height: 138px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 4px 10px 0 rgb(18 113 239 / 0.6);
+    text-align: center;
+}
+
+.apiSort .modular p {
+    font-size: 16px;
+    line-height: 40px;
+    color: #181818;
+}
+
+.apiSort .container p {
+    text-align: center;
+}
+
+.apiSort .container p a {
+    font-size: 14px;
+}
+
+.apiSort ul li a:hover {
+    background: #27e;
+}
+
+.apiSort ul li a:hover p {
+    color: #FFF;
+}
+
+
+/* 下面就是apiMaster慧集部分了 */
+.apiMaster .container .content {
+    background: url(../images/master-left-bg.svg)no-repeat;
+    display: flex;
+    justify-content: right;
+}
+
+.apiMaster .content .li-left {
+    display: inline-block;
+    width: 4px;
+    height: 24px;
+    background-color: #1271EF;
+    vertical-align: center;
+    margin-bottom: 7px;
+}
+
+.apiMaster .container ul {
+    padding-top: 50px;
+}
+
+.apiMaster .content .li-right {
+    display: inline-block;
+    width: 507px;
+    /* background-color: #666; */
+    padding: 20px 0px 20px 10px;
+}
+
+.apiMaster .content .li-right p:nth-child(1) {
+    font-size: 18px;
+    color: #333;
+    line-height: 26px;
+}
+
+.apiMaster .content .li-right p:nth-child(2) {
+    font-size: 12px;
+    color: #666;
+    line-height: 30px;
+}
+
+/* 下面就是服务巨头轮播头了 */
+.case .title a{
+    line-height: 50px;
+}
+.swiper-case{
+    height: 270px;
+    background-color: #f8f9fb;
+}
+.swiper-case .item>img{
+    width: 580px;
+    height: 290px;
+}
+.case .container{
+    position: relative;
+    margin-top: 50px;
+}
+.swiper-case .container .item{
+    height: 290px;
+    z-index: 10;
+    top: -20px;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    transition: all 1s;
+}
+/* 渐变透明效果图 */
+.swiper-case .container .item:nth-child(1){
+    opacity: 0;
+}
+.swiper-case .container .item:nth-child(2){
+    opacity: 0;
+}
+.swiper-case .container .item:nth-child(3){
+    opacity: 0;
+}
+.case .swiper-case .container .active{
+    opacity: 1;
+}
+
+
+.swiper-case .container .item .font{
+   margin-left: 70px;
+   font-size: 14px;
+    line-height: 24px;
+}
+.font-top{
+    margin-top: 40px;
+}
+.font-bottom{
+    text-align: right;
+    margin-top: 30px;
+    font-size: 12px;
+}
+.font-bottom span{
+    display: inline-block;
+    width: 13px;
+    height: 4px;
+    background-color: #1271EF;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+
+
+
+
+
+/* 下面就是数据服务部分了 */
+.data .container ul {
+    padding-top: 10px;
+    display: flex;
+    align-content: center;
+}
+
+.data .container ul li {
+    text-align: center;
+    width: 200px;
+    height: 142px;
+    /* background: #bbb; */
+    padding-top: 10px;
+}
+
+.data .container ul li span {
+    display: block;
+    font-size: 12px;
+    line-height: 50px;
+}
+
+.data .container ul li .small {
+    padding: 10px 50px;
+}
+
+/* 下面就是体验试用部分了 */
+.try {
+    margin-top: 96px;
+    background: url(../images/login-register-bg.svg) #1271ef;
+}
+
+.try .container {
+    padding-top: 64px;
+    text-align: center;
+    height: 240px;
+}
+
+.try .container h2 {
+    font-size: 32px;
+    color: #FFF;
+    padding-bottom: 22px;
+}
+
+.try .container a {
+    display: block;
+    width: 128px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 12px;
+    border: 1px solid #fff;
+    margin: 0 auto;
+}
+/* 这个是滚动条 */
+.roll{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* right: 50px; */
+    /* 这样放大缩小不会改变 */
+    left: 50%;
+    margin-left: 610px;
+    bottom: 50px;
+    background: url(../images/returntopicon.jpg);
+    background-position:-163px -56px;
+    display: none;
+}
+.roll:hover{
+    background-position:-163px -98px;
+}

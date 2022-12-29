@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="widtr=device-widtr, initial-scale=1.0">
+    <title>api详情页面</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/apidetails.css">
+</head>
+
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <a class="header-left" href="#"><img src="./images/new-logo-white2.png" alt="源码大数据"></a>
+        <span class="header-center">
+            <a href="./index.html">首页</a>
+            <a class="active" href="api.html">API</a>
+            <a href="case.html">案例</a>
+        </span>
+        <span class="header-right">
+            <a class="logging" href="./login.html">登录</a>
+            <a class="register" href="./register.html">注册有礼</a>
+        </span>
+    </header>
+
+    <!-- 下面就是横幅和粒子效果图片了 -->
+    <div class="banner">
+        <!-- 背景div -->
+        <!-- 给粒子效果设置一个容器放在里面 -->
+        <div class="mask"></div>
+        <div id="mydiv" style="height:270px;"></div>
+        <div class="container">
+            <div class="container-left">
+                <img src="./images/API11.jpg" alt="">
+                <p class="icon">
+                    <span>
+                        <img src="./images/API_smallicon_01.jpg" alt=""><br>
+                        103
+                    </span>
+                    <span>
+                        <img src="./images/API_smallicon_02.jpg" alt=""><br>
+                        14245
+                    </span>
+                    <span>
+                        <img src="./images/API_smallicon_03.jpg" alt=""><br>
+                        623
+                    </span>
+                </p>
+            </div>
+            <div class="container-right">
+                <h2>身份证实名认证 <span>支持HTTPS</span> <span>企业专业</span></h2>
+                <p class="icon">
+                    <span><img src="./images/API03.jpg" alt="">限企业实名用户使用</span>
+                    <span><img src="./images/API08.jpg" alt="">本接口需提供应用场景审核</span>
+                    <span><img src="./images/API05.jpg" alt="">个人实名用户无法使用</span>
+                </p>
+                <p class="censor">检测姓名和身份证号是否一致，身份证验证。</p>
+                <div class="quantity">
+                    <span class="quantity-img"><img src="./images/API17.jpg" alt=""> 扫码测试</span>
+                    <div class="frequency">
+                        <img src="./images/103-demo.png" alt="">
+                        <p>打开微信扫一扫</p>
+                    </div>
+                    <div class="qrcode">
+                        <span>4000次</span>
+                        <span>8000次</span>
+                        <span>40000次</span>
+                    </div>
+                </div>
+                <p class="price"><span>¥1200</span>(约 0.3000元/次),仅限企业实名购买;</p>
+                <span>立即申请</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 接下来就是写选项卡模块的了 -->
+    <div class="details-nav">
+        <div class="container">
+            <span class="on">API文档</span>
+            <span>错误码参照</span>
+            <span>示例代码</span>
+            <span>联系我们</span>
+        </div>
+    </div>
+    <!-- 内容部分 -->
+    <div class="details-content">
+        <div class="container">
+            <!-- 第一个盒子的数据 -->
+            <div class="file-item">
+                <div class="item-box">
+                    <!-- 左边的内容 -->
+                    <div class="left">
+                        <!-- 测试工具 -->
+                        <div>
+                            <p><span>接口地址：</span> http://op.itsource.cn/idcard/query</p>
+                            <p><span>返回格式：</span> json</p>
+                            <p><span>请求方式：</span> http get/post</p>
+                            <p><span>请求示例：</span> http://op.itsource.cn/idcard/query?key=您申请的KEY&idcard=&realname=</p>
+                            <p><span>接口备注：</span> error_code为0时计费</p>
+                            <span class="btn">API测试工具</span>
+                        </div>
+                        <!-- 请求参数 -->
+                        <div class="description">
+                            <p class="title">请求参数说明：</p>
+                            <table>
+                                <tr class="bold">
+                                    <td>名称</td>
+                                    <td>必填</td>
+                                    <td>类型</td>
+                                    <td>说明</td>
+                                </tr>
+                                <tr>
+                                    <td>idcard</td>
+                                    <td>是</td>
+                                    <td>string</td>
+                                    <td>身份证号码</td>
+                                </tr>
+                                <tr>
+                                    <td>realname</td>
+                                    <td>是</td>
+                                    <td>string</td>
+                                    <td>姓名(UTF-8)</td>
+                                </tr>
+                                <tr>
+                                    <td>orderid</td>
+                                    <td>否</td>
+                                    <td>int</td>
+                                    <td>传1时返回单号，默认不返回单号(建议传入)</td>
+                                </tr>
+                                <tr>
+                                    <td>key</td>
+                                    <td>是</td>
+                                    <td>string</td>
+                                    <td>在个人中心->我的数据,接口名称上方查看</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- 返回参数说明 -->
+                        <div class="return-box">
+                            <p class="title">返回参数说明：</p>
+                            <table class="return">
+                                <tr class="bold">
+                                    <td>名称</td>
+                                    <td>类型</td>
+                                    <td>说明</td>
+                                </tr>
+                                <tr>
+                                    <td>error_code</td>
+                                    <td>int</td>
+                                    <td>返回码</td>
+                                </tr>
+                                <tr>
+                                    <td>reason</td>
+                                    <td>string</td>
+                                    <td>返回说明</td>
+                                </tr>
+                                <tr>
+                                    <td>result</td>
+                                    <td>object</td>
+                                    <td>返回结果集</td>
+                                </tr>
+                                <tr>
+                                    <td>realname</td>
+                                    <td>string</td>
+                                    <td>属result,真实姓名</td>
+                                </tr>
+                                <tr>
+                                    <td>idcard</td>
+                                    <td>string</td>
+                                    <td>属result,身份证号</td>
+                                </tr>
+                                <tr>
+                                    <td>res</td>
+                                    <td>int</td>
+                                    <td>属result,匹配详情,1匹配,2不匹配</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- json在线格式化工具 -->
+                        <div class="json">
+                            <div class="json-top">
+                                <p class="title">JSON返回示例：</p><span>JSON在线格式化工具</span>
+                            </div>
+                            <div class="json-bottom">
+                                <p class="json-left">{</p>
+                                <p>"reason": "成功",</p>
+                                <p>"result": {</p>
+                                <p>"realname": "***",/*真实姓名*/</p>
+                                <p>"idcard": "******************",/*身份证号码*/</p>
+                                <p>"orderid":"J103202010151450419556",/*流水号*/</p>
+                                <p>"res": 1 /*1：匹配 2：不匹配*/</p>
+                                <p>},</p>
+                                <p>"error_code": 0</p>
+                                <p class="json-left">}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 下面该做右边的类容了 -->
+                    <!-- 右边的内容 -->
+                    <div class="right">
+                        <h2>活动推荐/Activity</h2>
+                        <img src="./images/sfz-aside1.png" alt="">
+                        <img src="./images/details-aside02.png" alt="">
+                        <img src="./images/details-aside03.png" alt="">
+                        <h2>猜你喜欢</h2>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API22.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>短信API服务</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API26.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>银行卡四元素校验</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API30.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>身份证查询</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API33.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>身份证OCR识别</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API36.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>三网手机实名制认证</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 第二个盒子的数据 -->
+            <div class="reference-item">
+                <div class="item-box">
+                    <!-- 左边的内容 -->
+                    <div class="left">
+                        <!-- 请求参数 -->
+                        <div class="description">
+                            <p class="title">请求参数说明：</p>
+                            <table>
+                                <tr class="bold">
+                                    <td>名称</td>
+                                    <td>必填</td>
+                                    <td>类型</td>
+                                    <td>说明</td>
+                                </tr>
+                                <tr>
+                                    <td>idcard</td>
+                                    <td>是</td>
+                                    <td>string</td>
+                                    <td>身份证号码</td>
+                                </tr>
+                                <tr>
+                                    <td>realname</td>
+                                    <td>是</td>
+                                    <td>string</td>
+                                    <td>姓名(UTF-8)</td>
+                                </tr>
+                                <tr>
+                                    <td>orderid</td>
+                                    <td>否</td>
+                                    <td>int</td>
+                                    <td>传1时返回单号，默认不返回单号(建议传入)</td>
+                                </tr>
+                                <tr>
+                                    <td>key</td>
+                                    <td>是</td>
+                                    <td>string</td>
+                                    <td>在个人中心->我的数据,接口名称上方查看</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- 返回参数说明 -->
+                        <div class="return-box">
+                            <p class="title">返回参数说明：</p>
+                            <table class="return">
+                                <tr class="bold">
+                                    <td>名称</td>
+                                    <td>类型</td>
+                                    <td>说明</td>
+                                </tr>
+                                <tr>
+                                    <td>error_code</td>
+                                    <td>int</td>
+                                    <td>返回码</td>
+                                </tr>
+                                <tr>
+                                    <td>reason</td>
+                                    <td>string</td>
+                                    <td>返回说明</td>
+                                </tr>
+                                <tr>
+                                    <td>result</td>
+                                    <td>object</td>
+                                    <td>返回结果集</td>
+                                </tr>
+                                <tr>
+                                    <td>realname</td>
+                                    <td>string</td>
+                                    <td>属result,真实姓名</td>
+                                </tr>
+                                <tr>
+                                    <td>idcard</td>
+                                    <td>string</td>
+                                    <td>属result,身份证号</td>
+                                </tr>
+                                <tr>
+                                    <td>res</td>
+                                    <td>int</td>
+                                    <td>属result,匹配详情,1匹配,2不匹配</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- json在线格式化工具 -->
+                        <div class="json">
+                            <div class="json-top">
+                                <p class="title">JSON返回示例：</p><span>JSON在线格式化工具</span>
+                            </div>
+                            <div class="json-bottom">
+                                <p class="json-left">{</p>
+                                <p>"reason": "成功",</p>
+                                <p>"result": {</p>
+                                <p>"realname": "***",/*真实姓名*/</p>
+                                <p>"idcard": "******************",/*身份证号码*/</p>
+                                <p>"orderid":"J103202010151450419556",/*流水号*/</p>
+                                <p>"res": 1 /*1：匹配 2：不匹配*/</p>
+                                <p>},</p>
+                                <p>"error_code": 0</p>
+                                <p class="json-left">}</p>
+                            </div>
+                        </div>
+
+                        <!-- 下面该做右边的类容了 -->
+                    </div>
+
+                    <!-- 右边的内容 -->
+                    <div class="right">
+                        <h2>活动推荐/Activity</h2>
+                        <img src="./images/sfz-aside1.png" alt="">
+                        <img src="./images/details-aside02.png" alt="">
+                        <img src="./images/details-aside03.png" alt="">
+                        <h2>猜你喜欢</h2>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API22.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>短信API服务</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API26.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>银行卡四元素校验</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API30.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>身份证查询</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API33.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>身份证OCR识别</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API36.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>三网手机实名制认证</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- 第三个盒子的数据 -->
+            <div class="example-item">
+                <div class="item-box">
+                    <!-- 左边的内容 -->
+                    <div class="left">
+
+                        <!-- json在线格式化工具 -->
+                        <div class="json">
+                            <div class="json-top">
+                                <p class="title">JSON返回示例：</p><span>JSON在线格式化工具</span>
+                            </div>
+                            <div class="json-bottom">
+                                <p class="json-left">{</p>
+                                <p>"reason": "成功",</p>
+                                <p>"result": {</p>
+                                <p>"realname": "***",/*真实姓名*/</p>
+                                <p>"idcard": "******************",/*身份证号码*/</p>
+                                <p>"orderid":"J103202010151450419556",/*流水号*/</p>
+                                <p>"res": 1 /*1：匹配 2：不匹配*/</p>
+                                <p>},</p>
+                                <p>"error_code": 0</p>
+                                <p class="json-left">}</p>
+                            </div>
+                        </div>
+
+                        <!-- 下面该做右边的类容了 -->
+                    </div>
+
+                    <!-- 右边的内容 -->
+                    <div class="right">
+                        <h2>活动推荐/Activity</h2>
+                        <img src="./images/sfz-aside1.png" alt="">
+                        <img src="./images/details-aside02.png" alt="">
+                        <img src="./images/details-aside03.png" alt="">
+                        <h2>猜你喜欢</h2>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API22.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>短信API服务</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API26.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>银行卡四元素校验</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API30.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>身份证查询</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API33.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>身份证OCR识别</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API36.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>三网手机实名制认证</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!-- 第四个盒子的数据 -->
+            <div class="contact-item">
+                <div class="item-box">
+                    <!-- 左边的内容 -->
+                    <div class="left">
+                        <!-- 请求参数 -->
+                        <div class="description">
+                            <p class="title">联系我们</p>
+                            <table>
+                                <tr class="bold">
+                                    <td>内容</td>
+                                    <td>详细</td>
+                                </tr>
+                                <tr>
+                                    <td>售前咨询①:</td>
+                                    <td>0512-88869195</td>
+                                </tr>
+                                <tr>
+                                    <td>客服热线:</td>
+                                    <td>400-882-7715</td>
+                                </tr>
+                                <tr>
+                                    <td>在线客服QQ:</td>
+                                    <td>800076065</td>
+                                </tr>
+                                <tr>
+                                    <td>接口测试:</td>
+                                    <td>API测试工具</td>
+                                </tr>
+                            </table>
+                        </div> 
+                        <!-- 下面该做右边的类容了 -->
+                    </div>
+
+                    <!-- 右边的内容 -->
+                    <div class="right">
+                        <h2>活动推荐/Activity</h2>
+                        <img src="./images/sfz-aside1.png" alt="">
+                        <img src="./images/details-aside02.png" alt="">
+                        <img src="./images/details-aside03.png" alt="">
+                        <h2>猜你喜欢</h2>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API22.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>短信API服务</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API26.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>银行卡四元素校验</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API30.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>身份证查询</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API33.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>身份证OCR识别</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                        <div class="right-item">
+                            <span class="img-box">
+                                <img src="./images/API36.jpg" alt="">
+                            </span>
+                            <p>
+                                <span>三网手机实名制认证</span>
+                                <span class="hidden"> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+
+     <!-- 免费注册部分 -->
+     <div class="free-register">
+        <div class="container">
+            <h2>现在注册，百款接口免费测试</h2>
+            <p>免费注册</p>
+        </div>
+     </div>
+     <footer class="footer container">
+     </footer>
+
+
+    <!-- js代码的引入 -->
+    <script type="text/javascript" src="./js/canvas-particle.js"></script>
+    <script src="./js/dom.js"></script>
+    <script type="text/javascript" src="./js/apidetails.js"></script>
+</body>
+
+</html>
